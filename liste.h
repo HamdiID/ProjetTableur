@@ -30,3 +30,4 @@ node_t *list_headRemove(node_t *head);
 /* destruction complète (libère uniquement les noeuds) */
 void list_destroy(node_t *head);
 
+void list_print(node_t *head,void(*fct)(void*));

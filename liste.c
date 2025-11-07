@@ -9,8 +9,12 @@ node_t *list_create(void)
 }
 
 void *list_get_data(const node_t *node){
+    if(node == NULL){
+       return NULL;
+    }
     return node->valeur;
 }
+
 
 void list_set_data(node_t *node, void *data)
 {
@@ -39,7 +43,7 @@ node_t *list_insert(node_t *head, void *data)
     return head;
     }
 
-    head->next = newHead;
+    newHead->next = head;
     list_set_data(newHead, data);
 
     return newHead;
@@ -64,4 +68,14 @@ node_t *list_headRemove(node_t *head)
 /* destruction complète (libère uniquement les noeuds) */
 void list_destroy(node_t *head)
 {
+}
+
+void list_print(node_t *head,void(*fct)(void*)){
+
+node_t *ptr = head;
+while(ptr){
+(*fct)(list_get_data(ptr));
+ptr = list_next(ptr);
+
+}
 }
