@@ -7,9 +7,7 @@ node_t *list_create(void){//creation d'une liste vide
 }
 
 void *list_get_data(const node_t *node){
-
-    
-
+    return node->valeur;
 }
 
 void list_set_data(node_t *node, void *data){
