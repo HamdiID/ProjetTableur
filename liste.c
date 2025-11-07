@@ -9,7 +9,7 @@ node_t *list_create(void)
 }
 
 void *list_get_data(const node_t *node){
-return node->valeur;
+    return node->valeur;
 }
 
 void list_set_data(node_t *node, void *data)
@@ -36,7 +36,7 @@ node_t *list_insert(node_t *head, void *data)
     node_t *newHead = (void *)malloc(sizeof(node_t));
     if (newHead == NULL)
     {
-    return list_create();
+    return head;
     }
 
     head->next = newHead;
