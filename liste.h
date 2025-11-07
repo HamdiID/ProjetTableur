@@ -1,6 +1,5 @@
 
 typedef struct node {
-
 } node_t;
 
 /* création d'une liste vide (retourne NULL pour liste vide) */
