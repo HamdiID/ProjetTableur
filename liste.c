@@ -7,8 +7,8 @@ node_t *list_create(void)
     return NULL;
 }
 
-void *list_get_data(const node_t *node)
-{
+void *list_get_data(const node_t *node){
+
 }
 
 void list_set_data(node_t *node, void *data)
