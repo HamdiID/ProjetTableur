@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "liste.h"
 
 node_t *list_create(void)
@@ -8,7 +9,7 @@ node_t *list_create(void)
 }
 
 void *list_get_data(const node_t *node){
-
+return node->valeur;
 }
 
 void list_set_data(node_t *node, void *data)
@@ -35,7 +36,7 @@ node_t *list_insert(node_t *head, void *data)
     node_t *newHead = (void *)malloc(sizeof(node_t));
     if (newHead == NULL)
     {
-    return -1;
+    return list_create();
     }
 
     head->next = newHead;
